@@ -1,0 +1,2 @@
+Product: Laptop, Price: 50000, Discount: 10
+Product: Laptop, Price: 50000, Discount: 10

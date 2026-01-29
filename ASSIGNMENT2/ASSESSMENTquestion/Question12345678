@@ -1,0 +1,23 @@
+1. Difference between synchronous and asynchronous file operations
+Ans. Synchronous file operations block the execution of the program until the task is completed, while asynchronous file operations run in the background and allow the program to continue executing without waiting.
+
+2. When to use file streams instead of reading the entire file
+Ans. File streams should be used when working with large files or continuous data because they process data in chunks, reducing memory usage and improving performance.
+
+3. Purpose of the ‘utf8’ encoding parameter
+Ans. The utf8 encoding parameter specifies how file data should be interpreted as text, allowing raw binary data to be converted into readable characters.
+
+4. Common error codes in file system operations and their meanings
+Ans.Common error codes include ENOENT (file or directory not found), EACCES (permission denied), EEXIST (file already exists), and ENOTDIR (expected a directory but found something else).
+
+5. Safely deleting a directory with all its contents
+Ans. directory can be safely deleted by using a recursive delete operation that removes all files and subdirectories before deleting the main directory.
+
+6. Concept of piping in streams
+Ans. Piping is a mechanism that connects a readable stream to a writable stream so that data flows automatically from the source to the destination without manual handling.
+
+7. Importance of handling errors in file operations
+Ans. Handling errors in file operations is important to prevent application crashes, manage unexpected situations, and ensure the program behaves reliably.
+
+8. Difference between writeFile and appendFile methods
+Ans. The writeFile method replaces the existing content of a file, whereas the appendFile method adds new data to the end of the file without removing existing content.

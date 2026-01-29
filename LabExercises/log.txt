@@ -1,0 +1,7 @@
+INFO Server started
+INFO User logged in
+ERROR Database connection failed
+WARNING Disk space low
+ERROR File write failed
+INFO Request completed
+ERROR Timeout occurred

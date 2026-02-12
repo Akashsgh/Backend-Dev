@@ -34,5 +34,11 @@
     "name": "Divyanshu Gupta",
     "age": 21,
     "branch": "CSE"
+  },
+  {
+    "id": 7,
+    "name": "akash",
+    "branch": "CSE",
+    "age": "21"
   }
 ]

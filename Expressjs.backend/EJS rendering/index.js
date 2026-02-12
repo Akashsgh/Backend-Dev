@@ -23,7 +23,12 @@ app.post('/students/register', async (req, res) => {
         const data = await fs.readFile('students.json', 'utf-8');
         const users = JSON.parse(data);
 
-        users.push({ username: req.body.username });
+        users.push({ 
+            id: users.length + 1,
+            name: req.body.name,
+            branch: req.body.branch,
+            age: req.body.age
+        });
 
         await fs.writeFile('students.json', JSON.stringify(users, null, 2));
 

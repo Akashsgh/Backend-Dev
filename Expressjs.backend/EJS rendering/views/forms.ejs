@@ -8,8 +8,15 @@
 <body>
     
     <h1>Form</h1>
-    <form action="/submit" method="POST">
-        <input type="text" name="username" placeholder="Username">
+    <form action="/students/register" method="POST">
+        <input type="text" name="name" placeholder="name">
+        <select name="branch" id="branch">
+           <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+                <option value="MECH">MECH</option>
+                 <option value="CIVIL">CIVIL</option>
+        </select>
+        <input type="text" name="age" placeholder="age">
         <button type="submit">Submit</button>
     </form>
     <h3>Users:</h3>

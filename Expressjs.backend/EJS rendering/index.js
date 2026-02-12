@@ -1,0 +1,38 @@
+const express = require('express');
+const app = express();
+const PORT = 3000;
+const fs = require('fs').promises;
+
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+
+
+app.get('/', async (req, res) => {
+    try {
+        const data = await fs.readFile('students.json', 'utf-8');
+        const users = JSON.parse(data);
+
+        res.render('forms', { users });
+    } catch (err) {
+        res.render('forms', { users: [] });
+    }
+});
+
+app.post('/students/register', async (req, res) => {
+    try {
+        const data = await fs.readFile('students.json', 'utf-8');
+        const users = JSON.parse(data);
+
+        users.push({ username: req.body.username });
+
+        await fs.writeFile('students.json', JSON.stringify(users, null, 2));
+
+        res.redirect('/');
+    } catch (err) {
+        res.send('Error saving student');
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});

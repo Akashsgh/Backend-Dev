@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Photo Gallery</h2>
+
+    <div class="gallery">
+        <% images.forEach(function(image) { %>
+            <img src="/images/<%= image %>" alt="Photo">
+        <% }) %>
+    </div>
+
+</body>
+</html>

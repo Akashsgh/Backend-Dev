@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+
+<h2>Add Student</h2>
+
+<form action="/add" method="POST">
+    Name:
+    <input type="text" name="name" required><br><br>
+
+    Branch:
+    <select name="branch" required>
+        <option value="">Select</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+        <option value="ME">ME</option>
+    </select><br><br>
+    <input type="text" name="age" placeholder="age" minlength="2" maxlength="2"><br><br>
+
+    <button type="submit">Add Student</button>
+</form>
+
+<br>
+<ol>
+    <%users.forEach((user,index) => { %>
+        <li><%= user.id %>-<%=user.name %> -<%= user.age %> <%= user.branch %></li>
+    <% }) %>
+</ol>
+
+</body>
+</html>
